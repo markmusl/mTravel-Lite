@@ -1,0 +1,5 @@
+// Todos os mixins do projeto. Uma só entrada: @use "../abstracts/mixins" as *;
+// Um mixin é um "conjunto de propriedades" inserido com @include nome;
+@forward "glass";
+@forward "buttons";
+@forward "layout";

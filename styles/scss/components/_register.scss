@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as *;
+
+.registration-section,
+.login-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .section-data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    border-radius: $radius-pill;
+    width: 300px;
+    max-width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+
+    background-color: $color-field;
+    border: 2px solid transparent;
+
+    &:focus-visible {
+      outline: none;
+      border-color: $color-black;
+    }
+  }
+}
+
+// texto pequeno por baixo dos títulos e mensagem de erro / sucesso
+.form-subtitle,
+.form-message {
+  font-size: $font-size-s;
+  letter-spacing: $letter-spacing;
+  color: $color-text-soft;
+  text-align: center;
+}
+
+.form-subtitle {
+  margin-bottom: 25px;
+}
+
+.form-message {
+  min-height: 1.5em; // não faz o botão saltar quando a mensagem aparece
+  margin-top: $space-small;
+}
+
+#registerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // 500px no computador; em ecrãs pequenos nunca passa da largura do ecrã
+  width: min(500px, 100% - 40px);
+
+  #submitButton {
+    margin-top: 50px;
+    width: 100%;
+  }
+}

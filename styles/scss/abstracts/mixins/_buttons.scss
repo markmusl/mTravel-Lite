@@ -1,0 +1,17 @@
+@use "../variables" as *;
+
+// pill-button — forma e comportamento de um botão "pílula": espaçamento, cantos
+// redondos, cursor, suavidade e aumento ao passar o rato. A cor é definida pelo botão.
+//   .botao { background-color: black; color: white; @include pill-button; }
+// Escreve o @include depois das propriedades normais: o mixin tem &:hover lá dentro.
+@mixin pill-button {
+  padding: $padding-button;
+  border-radius: $radius-pill;
+
+  cursor: pointer;
+  transition: all $speed-fast $easing;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

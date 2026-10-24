@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+
+@font-face {
+  font-family: "ABCFavorit-Light";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; // mostra texto logo, troca pela fonte quando carregar
+  src: url("#{$path-fonts}ABCFavoritTrial-Light.otf") format("opentype");
+}

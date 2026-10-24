@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+
+// O conteúdo de cada página. O body é flex com align-items: center,
+// por isso sem width: 100% o bloco ficaria do tamanho do conteúdo.
+.page {
+  width: 100%;
+}
+
+// ─────────────────────────
+// Mudança suave entre páginas (sem JavaScript)
+// ─────────────────────────
+// Cada página é um ficheiro HTML. Com @view-transition o browser faz um fundido
+// entre a página antiga e a nova (Chrome, Edge, Safari 18.2+).
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: $speed-page;
+}
+
+// a barra de navegação tem nome próprio: fica quieta durante a mudança
+nav {
+  view-transition-name: navbar;
+}
+
+// Browsers sem @view-transition (Firefox): a página nova aparece com um fundido simples
+@supports not (view-transition-name: none) {
+  .page,
+  .footer {
+    animation: page-in $speed-page $easing;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}

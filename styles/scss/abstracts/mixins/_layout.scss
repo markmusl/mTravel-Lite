@@ -1,0 +1,7 @@
+// flex-center — centra o conteúdo na horizontal e na vertical.
+//   .box { @include flex-center; }
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,29 @@
+// ─────────────────────────
+// Liquid glass: transparência, fundo, bordas, desfocagem e sombras
+// ─────────────────────────
+$transparency-primary: 0.7;
+$transparency-secondary: 0.5;
+
+$background-primary: rgba(255, 255, 255, $transparency-primary);
+$background-secondary: rgba(255, 255, 255, $transparency-secondary);
+
+$border-top: 1px solid rgb(255, 255, 255, 0.6);
+$border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+
+// blur desfoca o que está atrás do vidro; saturate deixa as cores mais vivas (como no iOS)
+$blur: blur(16px) saturate(180%);
+
+// Em fundo branco o vidro não se vê — as sombras "desenham-no":
+//   1) brilho claro na borda de cima (inset = por dentro)
+//   2) contorno fino escuro (0 0 0 1px = sombra sem desfocagem)
+//   3) sombra suave por baixo
+$shadow-glass:
+  inset 0 1px 0 rgba(255, 255, 255, 0.8),
+  0 0 0 1px rgba(0, 0, 0, 0.06),
+  0 4px 16px rgba(0, 0, 0, 0.08);
+
+// o mesmo, com sombra mais funda — para superfícies grandes (barra de navegação)
+$shadow-glass-large:
+  inset 0 1px 0 rgba(255, 255, 255, 0.8),
+  0 0 0 1px rgba(0, 0, 0, 0.08),
+  0 10px 30px rgba(0, 0, 0, 0.12);

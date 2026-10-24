@@ -1,0 +1,17 @@
+@use "../variables" as *;
+
+// liquid-container — superfície de "vidro": fundo semitransparente + desfocagem do que
+// está atrás + bordas claras + sombra (para o vidro se ver também em fundo branco).
+//   .painel { @include liquid-container; }
+// Outra transparência ou sombra? Substitui depois do include:
+//   .painel { @include liquid-container; background-color: $background-primary; }
+@mixin liquid-container {
+  background-color: $background-secondary;
+  -webkit-backdrop-filter: $blur; // Safari
+  backdrop-filter: $blur;
+
+  border-top: $border-top;
+  border-bottom: $border-bottom;
+
+  box-shadow: $shadow-glass;
+}

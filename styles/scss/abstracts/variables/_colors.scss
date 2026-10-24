@@ -1,0 +1,14 @@
+// ─────────────────────────
+// Cores
+// ─────────────────────────
+$color-black: black;
+$color-white: white;
+$color-gray: #444444;
+
+$color-text-soft: rgba(0, 0, 0, 0.6);
+$color-fill: rgba(0, 0, 0, 0.1);
+$color-overlay: rgba(0, 0, 0, 0.1);
+$color-field: rgb(240, 240, 240);
+
+// Degradado pastel (linear-gradient: ângulo, cor1, cor2, ...)
+$gradient-page: linear-gradient(135deg, #d9e6ff 0%, #ecdfff 50%, #ffe3d3 100%);

@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-small;
+
+  width: 100%;
+  min-height: 100px;
+}
+
+// secção do tamanho do ecrã
+.full {
+  height: 100vh;
+  min-height: 520px;
+}

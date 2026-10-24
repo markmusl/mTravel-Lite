@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 75px; // espaço para a barra de navegação fixa
+
+  background-color: #ffffff;
+  font-family: $font-main;
+}

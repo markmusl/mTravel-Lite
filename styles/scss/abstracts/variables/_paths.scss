@@ -1,0 +1,5 @@
+// Caminhos para ficheiros usados no SCSS. São relativos ao styles.css compilado
+// (styles/scss/main/styles.css): os três "../" sobem até à raiz do projeto.
+$path-materials: "../../../materials/";
+$path-fonts: $path-materials + "fonts/";
+$path-images: $path-materials + "images/";

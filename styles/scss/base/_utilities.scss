@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+
+// esconde o elemento por completo (ocupa 0 espaço)
+.hidden {
+  display: none !important;
+}
+
+// esconde mas mantém o espaço (usado em animações)
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+// esconde do ecrã, mas leitores de ecrã continuam a ler
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+// "saltar para o conteúdo": aparece quando se carrega em Tab
+.skip-link {
+  position: fixed;
+  top: $space-small;
+  left: $space-small;
+  z-index: $z-navbar + 1;
+
+  padding: $padding-button;
+  border-radius: $radius-pill;
+  background-color: $color-black;
+  color: $color-white;
+
+  transform: translateY(-200%);
+
+  &:focus {
+    transform: none;
+  }
+}

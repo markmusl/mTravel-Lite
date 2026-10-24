@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-medium;
+
+  width: 80%;
+  margin-top: $section-gap;
+  padding: $section-gap 0;
+
+  text-align: center;
+
+  .footer-copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .footer-title {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-light;
+      letter-spacing: $letter-spacing;
+      line-height: 1.2;
+    }
+
+    .footer-subtitle {
+      font-size: $font-size-m;
+      letter-spacing: $letter-spacing;
+    }
+
+    // nota sobre esta versão do projeto
+    .footer-note {
+      margin-top: $space-small;
+
+      font-size: $font-size-xs;
+      color: $color-text-soft;
+    }
+  }
+
+  .footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: $space-small;
+  }
+}

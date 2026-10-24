@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Cartão grande com a fotografia de fundo (início da página inicial)
+.image-container {
+  @include flex-center;
+  flex-direction: column;
+
+  background-image: url("#{$path-images}backgrounds/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  width: 95%;
+  height: 95%;
+  padding: $space-medium;
+
+  gap: 15px;
+
+  border-radius: $radius-card;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  // texto branco sobre a fotografia (os botões têm a sua própria cor)
+  color: $color-white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: inherit;
+  }
+
+  .logo {
+    width: min(405px, 80%);
+    height: auto;
+  }
+
+  .slogan {
+    font-size: $font-size-m;
+    font-weight: $font-weight-light;
+    letter-spacing: $letter-spacing;
+    text-align: center;
+  }
+
+  // lista de destinos na secção "sobre"
+  .destination-list {
+    margin-top: $space-small;
+    padding-left: $space-medium;
+    list-style: disc;
+  }
+
+  // secção "sobre": título à esquerda, texto à direita
+  &.vertical {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 clamp(20px, 12vw, 200px);
+
+    h2 {
+      margin-bottom: 0;
+      font-size: $font-size-xl;
+    }
+
+    > div {
+      width: 450px;
+      max-width: 100%;
+
+      p + p {
+        margin-top: $space-medium;
+      }
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+}
+
+.locations-inline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 900px;
+  margin-top: 25px;
+  gap: 7px;
+}

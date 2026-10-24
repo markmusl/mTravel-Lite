@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria do mTravel: fotografias, datas e playlists de cada viagem.">
+    <title>mTravel | galerie</title>
+    <link rel="icon" href="materials/images/branding/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/scss/main/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">saltar para o conteúdo</a>
+
+    <!-- barra de navegação (igual em todas as páginas) -->
+    <nav aria-label="Principal">
+      <a href="index.html" aria-label="mTravel — página inicial">
+        <img src="materials/images/branding/logo.svg" class="logo" alt="mTravel" width="405" height="69">
+      </a>
+
+      <div class="nav-section">
+        <a class="nav-item" href="index.html">home</a>
+        <a class="nav-item active" href="galerie.html" aria-current="page">la galerie</a>
+        <a class="nav-item" href="mapa.html">mapa</a>
+      </div>
+
+      <a class="button" href="registration.html">sign up</a>
+    </nav>
+
+    <!-- fundo desfocado enquanto a playlist está aberta -->
+    <div class="overlay-window is-hidden" id="overlay"></div>
+
+    <main class="page" id="conteudo">
+      <h1 class="sr-only">la galerie — as minhas viagens</h1>
+
+      <!-- um botão por destino -->
+      <section class="location-bar" aria-label="Destinos">
+      <a class="liquid-button" href="galerie.html#cazaquistao"><span aria-hidden="true">🇰🇿</span>&nbsp; cazaquistão</a>
+      <a class="liquid-button" href="galerie.html#astana"><span aria-hidden="true">🇰🇿</span>&nbsp; astana</a>
+      <a class="liquid-button" href="galerie.html#russia"><span aria-hidden="true">🇷🇺</span>&nbsp; rússia</a>
+      <a class="liquid-button" href="galerie.html#ucrania"><span aria-hidden="true">🇺🇦</span>&nbsp; ucrânia</a>
+      <a class="liquid-button" href="galerie.html#tailandia"><span aria-hidden="true">🇹🇭</span>&nbsp; tailândia</a>
+      <a class="liquid-button" href="galerie.html#dubai"><span aria-hidden="true">🇦🇪</span>&nbsp; dubai</a>
+      <a class="liquid-button" href="galerie.html#china"><span aria-hidden="true">🇨🇳</span>&nbsp; china</a>
+      <a class="liquid-button" href="galerie.html#portugal"><span aria-hidden="true">🇵🇹</span>&nbsp; portugal</a>
+      </section>
+
+      <section class="galerie-container" id="cazaquistao" aria-labelledby="titulo-cazaquistao">
+        <div class="moment-data">
+          <div class="info-left">
+            <p class="moment-flag" aria-hidden="true">🇰🇿</p>
+            <h2 class="moment-location" id="titulo-cazaquistao">cazaquistão</h2>
+            <p class="moment-date">até 2019</p>
+            <p class="moment-description">O maior país sem costa marítima do mundo, na Ásia Central. Fotografias de antes da mudança.</p>
+            <p class="moment-source">fonte: <a class="text-link" href="https://pt.wikipedia.org/wiki/Cazaquist%C3%A3o" target="_blank" rel="noopener noreferrer">Wikipédia — Cazaquistão</a></p>
+          </div>
+        </div>
+
+        <!-- as fotografias são escritas por tools/atualizar-fotos.py -->
+        <!-- fotos:cazaquistao -->
+    <!-- /fotos:cazaquistao -->
+      </section>
+
+      <section class="galerie-container" id="astana" aria-labelledby="titulo-astana">
+        <div class="moment-data">
+          <div class="info-left">
+            <p class="moment-flag" aria-hidden="true">🇰🇿</p>
+            <h2 class="moment-location" id="titulo-astana">astana</h2>
+            <p class="moment-date">agosto — setembro 2026</p>
+            <p class="moment-description">Capital do Cazaquistão, no norte do país, junto ao rio Ishim. Até 1998 chamava-se Aqmola.</p>
+            <p class="moment-source">fonte: <a class="text-link" href="https://pt.wikipedia.org/wiki/Astana" target="_blank" rel="noopener noreferrer">Wikipédia — Astana</a></p>
+          </div>
+
+          <!-- o botão só existe quando há playlist -->
+          <div class="info-right">
+            <button class="button playlist-button" type="button" aria-expanded="false" aria-controls="playlist-astana">
+              playlist
+              <img class="button-icon" src="materials/icons/chevron.up.svg" alt="" width="12" height="7">
+            </button>
+            <iframe
+              class="playlist-window is-hidden"
+              id="playlist-astana"
+              title="Playlist de astana no Apple Music"
+              data-src="https://embed.music.apple.com/pt/playlist/astana/pl.u-zPyL1gXTeG3GjXb"
+              allow="autoplay *; encrypted-media *"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- as fotografias são escritas por tools/atualizar-fotos.py -->
+        <!-- fotos:astana -->
+        <div class="photos-container">
+      <img class="galerie-photo" src="materials/images/countries/astana/01.jpg" alt="Astana — fotografia 1 de 9" width="933" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/astana/02.jpg" alt="Astana — fotografia 2 de 9" width="933" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/astana/03.jpg" alt="Astana — fotografia 3 de 9" width="1400" height="933" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/astana/04.jpg" alt="Astana — fotografia 4 de 9" width="933" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/astana/05.jpg" alt="Astana — fotografia 5 de 9" width="933" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/astana/06.jpg" alt="Astana — fotografia 6 de 9" width="933" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/astana/07.jpg" alt="Astana — fotografia 7 de 9" width="933" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/astana/08.jpg" alt="Astana — fotografia 8 de 9" width="933" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/astana/09.jpg" alt="Astana — fotografia 9 de 9" width="1400" height="933" loading="lazy" decoding="async">
+    </div>
+    <!-- /fotos:astana -->
+      </section>
+
+      <section class="galerie-container" id="russia" aria-labelledby="titulo-russia">
+        <div class="moment-data">
+          <div class="info-left">
+            <p class="moment-flag" aria-hidden="true">🇷🇺</p>
+            <h2 class="moment-location" id="titulo-russia">rússia</h2>
+            <p class="moment-date">2015</p>
+            <p class="moment-description">O maior país do mundo, no norte da Eurásia.</p>
+            <p class="moment-source">fonte: <a class="text-link" href="https://pt.wikipedia.org/wiki/R%C3%BAssia" target="_blank" rel="noopener noreferrer">Wikipédia — Rússia</a></p>
+          </div>
+        </div>
+
+        <!-- as fotografias são escritas por tools/atualizar-fotos.py -->
+        <!-- fotos:russia -->
+        <div class="photos-container">
+      <img class="galerie-photo" src="materials/images/countries/russia/01.jpg" alt="Rússia — fotografia 1 de 4" width="1084" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/russia/02.jpg" alt="Rússia — fotografia 2 de 4" width="1400" height="933" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/russia/03.jpg" alt="Rússia — fotografia 3 de 4" width="933" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/russia/04.jpg" alt="Rússia — fotografia 4 de 4" width="788" height="1400" loading="lazy" decoding="async">
+    </div>
+    <!-- /fotos:russia -->
+      </section>
+
+      <section class="galerie-container" id="ucrania" aria-labelledby="titulo-ucrania">
+        <div class="moment-data">
+          <div class="info-left">
+            <p class="moment-flag" aria-hidden="true">🇺🇦</p>
+            <h2 class="moment-location" id="titulo-ucrania">ucrânia</h2>
+            <p class="moment-description">País do Leste Europeu, o segundo maior da Europa em área.</p>
+            <p class="moment-source">fonte: <a class="text-link" href="https://pt.wikipedia.org/wiki/Ucr%C3%A2nia" target="_blank" rel="noopener noreferrer">Wikipédia — Ucrânia</a></p>
+          </div>
+        </div>
+
+        <!-- as fotografias são escritas por tools/atualizar-fotos.py -->
+        <!-- fotos:ucrania -->
+    <!-- /fotos:ucrania -->
+      </section>
+
+      <section class="galerie-container" id="tailandia" aria-labelledby="titulo-tailandia">
+        <div class="moment-data">
+          <div class="info-left">
+            <p class="moment-flag" aria-hidden="true">🇹🇭</p>
+            <h2 class="moment-location" id="titulo-tailandia">tailândia</h2>
+            <p class="moment-date">2014</p>
+            <p class="moment-description">Reino do Sudeste Asiático, no centro da península da Indochina. Era conhecido como Sião.</p>
+            <p class="moment-source">fonte: <a class="text-link" href="https://pt.wikipedia.org/wiki/Tail%C3%A2ndia" target="_blank" rel="noopener noreferrer">Wikipédia — Tailândia</a></p>
+          </div>
+        </div>
+
+        <!-- as fotografias são escritas por tools/atualizar-fotos.py -->
+        <!-- fotos:tailandia -->
+    <!-- /fotos:tailandia -->
+      </section>
+
+      <section class="galerie-container" id="dubai" aria-labelledby="titulo-dubai">
+        <div class="moment-data">
+          <div class="info-left">
+            <p class="moment-flag" aria-hidden="true">🇦🇪</p>
+            <h2 class="moment-location" id="titulo-dubai">dubai</h2>
+            <p class="moment-date">2014</p>
+            <p class="moment-description">A maior cidade dos Emirados Árabes Unidos, na costa do golfo Pérsico.</p>
+            <p class="moment-source">fonte: <a class="text-link" href="https://pt.wikipedia.org/wiki/Dubai" target="_blank" rel="noopener noreferrer">Wikipédia — Dubai</a></p>
+          </div>
+        </div>
+
+        <!-- as fotografias são escritas por tools/atualizar-fotos.py -->
+        <!-- fotos:dubai -->
+        <div class="photos-container">
+      <img class="galerie-photo" src="materials/images/countries/dubai/01.jpg" alt="Dubai — fotografia 1 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/02.jpg" alt="Dubai — fotografia 2 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/03.jpg" alt="Dubai — fotografia 3 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/04.jpg" alt="Dubai — fotografia 4 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/05.jpg" alt="Dubai — fotografia 5 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/06.jpg" alt="Dubai — fotografia 6 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/07.jpg" alt="Dubai — fotografia 7 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/08.jpg" alt="Dubai — fotografia 8 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/09.jpg" alt="Dubai — fotografia 9 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/10.jpg" alt="Dubai — fotografia 10 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/11.jpg" alt="Dubai — fotografia 11 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/12.jpg" alt="Dubai — fotografia 12 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/13.jpg" alt="Dubai — fotografia 13 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/14.jpg" alt="Dubai — fotografia 14 de 33" width="1400" height="1050" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/15.jpg" alt="Dubai — fotografia 15 de 33" width="1400" height="1050" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/16.jpg" alt="Dubai — fotografia 16 de 33" width="1400" height="1050" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/17.jpg" alt="Dubai — fotografia 17 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/18.jpg" alt="Dubai — fotografia 18 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/19.jpg" alt="Dubai — fotografia 19 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/20.jpg" alt="Dubai — fotografia 20 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/21.jpg" alt="Dubai — fotografia 21 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/22.jpg" alt="Dubai — fotografia 22 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/23.jpg" alt="Dubai — fotografia 23 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/24.jpg" alt="Dubai — fotografia 24 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/25.jpg" alt="Dubai — fotografia 25 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/26.jpg" alt="Dubai — fotografia 26 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/27.jpg" alt="Dubai — fotografia 27 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/28.jpg" alt="Dubai — fotografia 28 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/29.jpg" alt="Dubai — fotografia 29 de 33" width="1400" height="930" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/30.jpg" alt="Dubai — fotografia 30 de 33" width="1050" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/31.jpg" alt="Dubai — fotografia 31 de 33" width="1050" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/32.jpg" alt="Dubai — fotografia 32 de 33" width="1050" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/dubai/33.jpg" alt="Dubai — fotografia 33 de 33" width="930" height="1400" loading="lazy" decoding="async">
+    </div>
+    <!-- /fotos:dubai -->
+      </section>
+
+      <section class="galerie-container" id="china" aria-labelledby="titulo-china">
+        <div class="moment-data">
+          <div class="info-left">
+            <p class="moment-flag" aria-hidden="true">🇨🇳</p>
+            <h2 class="moment-location" id="titulo-china">china</h2>
+            <p class="moment-date">2012</p>
+            <p class="moment-description">O maior país da Ásia Oriental e o segundo mais populoso do mundo.</p>
+            <p class="moment-source">fonte: <a class="text-link" href="https://pt.wikipedia.org/wiki/China" target="_blank" rel="noopener noreferrer">Wikipédia — China</a></p>
+          </div>
+        </div>
+
+        <!-- as fotografias são escritas por tools/atualizar-fotos.py -->
+        <!-- fotos:china -->
+        <div class="photos-container">
+      <img class="galerie-photo" src="materials/images/countries/china/01.jpg" alt="China — fotografia 1 de 11" width="1050" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/02.jpg" alt="China — fotografia 2 de 11" width="1050" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/03.jpg" alt="China — fotografia 3 de 11" width="1050" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/04.jpg" alt="China — fotografia 4 de 11" width="1050" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/05.jpg" alt="China — fotografia 5 de 11" width="1400" height="1050" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/06.jpg" alt="China — fotografia 6 de 11" width="1400" height="1050" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/07.jpg" alt="China — fotografia 7 de 11" width="1400" height="1050" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/08.jpg" alt="China — fotografia 8 de 11" width="930" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/09.jpg" alt="China — fotografia 9 de 11" width="930" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/10.jpg" alt="China — fotografia 10 de 11" width="930" height="1400" loading="lazy" decoding="async">
+      <img class="galerie-photo" src="materials/images/countries/china/11.jpg" alt="China — fotografia 11 de 11" width="1400" height="930" loading="lazy" decoding="async">
+    </div>
+    <!-- /fotos:china -->
+      </section>
+
+      <section class="galerie-container" id="portugal" aria-labelledby="titulo-portugal">
+        <div class="moment-data">
+          <div class="info-left">
+            <p class="moment-flag" aria-hidden="true">🇵🇹</p>
+            <h2 class="moment-location" id="titulo-portugal">portugal</h2>
+            <p class="moment-description">País do sudoeste da Europa, na zona ocidental da Península Ibérica.</p>
+            <p class="moment-source">fonte: <a class="text-link" href="https://pt.wikipedia.org/wiki/Portugal" target="_blank" rel="noopener noreferrer">Wikipédia — Portugal</a></p>
+          </div>
+        </div>
+
+        <!-- as fotografias são escritas por tools/atualizar-fotos.py -->
+        <!-- fotos:portugal -->
+    <!-- /fotos:portugal -->
+      </section>
+    </main>
+
+    <!-- rodapé (igual em todas as páginas) -->
+    <footer class="footer">
+      <div class="footer-copyright">
+        <p class="footer-title">© 2026 Mark Muslimov. All rights reserved.</p>
+        <p class="footer-subtitle">Made with ❤️ in Lisbon.</p>
+        <p class="footer-note">mTravel Lite — versão do mTravel adaptada para a escola (UFCD 0792)</p>
+      </div>
+
+      <div class="footer-socials">
+        <a class="liquid-button" href="https://www.linkedin.com/in/markmusl/" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a class="liquid-button" href="https://www.instagram.com/markmusl/" target="_blank" rel="noopener noreferrer">instagram</a>
+        <a class="liquid-button" href="https://github.com/markmusl" target="_blank" rel="noopener noreferrer">github</a>
+      </div>
+    </footer>
+
+    <script src="scripts/playlist.js" defer></script>
+  </body>
+</html>

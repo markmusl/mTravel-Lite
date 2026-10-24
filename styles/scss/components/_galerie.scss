@@ -1,0 +1,159 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Barra fixa em baixo, com um botão por destino
+.location-bar {
+  position: fixed;
+  bottom: 0;
+  z-index: $z-navbar - 1;
+  @include flex-center;
+  flex-direction: row;
+  justify-content: safe center; // se não couber, começa à esquerda e desliza
+
+  gap: 7px;
+  width: 100%;
+  min-height: 0; // anula o min-height das <section>
+  padding: 0 $space-small $space-small;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.galerie-container {
+  padding-top: $section-gap;
+
+  .moment-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+
+    width: 100%;
+    padding: 0 clamp(20px, 7vw, $space-xlarge);
+
+    .moment-flag,
+    .moment-location {
+      font-size: $font-size-l;
+      font-weight: $font-weight-light;
+      letter-spacing: $letter-spacing;
+      color: $color-black;
+    }
+
+    .moment-location {
+      margin-bottom: 0;
+    }
+
+    .moment-date {
+      font-size: $font-size-s;
+      letter-spacing: $letter-spacing;
+      color: $color-text-soft;
+    }
+
+    .moment-description {
+      margin-top: 25px;
+      width: 450px;
+      max-width: 100%;
+
+      font-size: $font-size-xs;
+      line-height: 140%;
+      letter-spacing: -0.04em;
+    }
+
+    // ligação para a fonte do texto
+    .moment-source {
+      margin-top: $space-small;
+
+      font-size: 12px;
+      color: $color-text-soft;
+    }
+  }
+
+  // botão "playlist" + janela com o leitor do Apple Music
+  .info-right {
+    position: relative;
+  }
+
+  .playlist-window {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: $z-playlist-window;
+
+    width: min(650px, 90vw);
+    height: 451px;
+    margin-top: $space-medium;
+
+    border: none;
+    border-top: $border-top;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: $color-white;
+
+    transform: scale(1.09);
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+
+    &.is-hidden {
+      transform: translateY(-15px);
+    }
+  }
+
+  .photos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    width: 100%;
+    margin-top: $space-medium;
+
+    background-image: $gradient-page;
+  }
+
+  .galerie-photo {
+    display: block;
+
+    width: 100%;
+    height: 50vh;
+
+    object-fit: cover;
+  }
+}
+
+// ─────────────────────────
+// Ecrãs mais pequenos
+// ─────────────────────────
+@media (max-width: 1000px) {
+  .galerie-container .photos-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .galerie-container {
+    .moment-data {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $space-medium;
+    }
+
+    .moment-data .moment-description {
+      width: 100%;
+    }
+
+    .photos-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galerie-photo {
+      height: 35vh;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .galerie-container .photos-container {
+    grid-template-columns: 1fr;
+  }
+}

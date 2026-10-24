@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mapa-múndi do mTravel com os destinos visitados. Clica num ponto para abrir a galeria.">
+    <title>mTravel | mapa</title>
+    <link rel="icon" href="materials/images/branding/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/scss/main/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">saltar para o conteúdo</a>
+
+    <!-- barra de navegação (igual em todas as páginas) -->
+    <nav aria-label="Principal">
+      <a href="index.html" aria-label="mTravel — página inicial">
+        <img src="materials/images/branding/logo.svg" class="logo" alt="mTravel" width="405" height="69">
+      </a>
+
+      <div class="nav-section">
+        <a class="nav-item" href="index.html">home</a>
+        <a class="nav-item" href="galerie.html">la galerie</a>
+        <a class="nav-item active" href="mapa.html" aria-current="page">mapa</a>
+      </div>
+
+      <a class="button" href="registration.html">sign up</a>
+    </nav>
+
+    <main class="page" id="conteudo">
+      <section class="page-intro">
+        <h1>mapa.</h1>
+        <p>
+          Os destinos do mTravel num só mapa. Clica num ponto para abrir a
+          galeria desse destino.
+        </p>
+      </section>
+
+      <div class="map-card">
+        <img
+          id="mapa-mundo"
+          src="materials/images/map/world.svg"
+          usemap="#mapa-viagens"
+          alt="Mapa-múndi com os destinos: cazaquistão, rússia, ucrânia, tailândia, dubai, china e portugal."
+          width="950"
+          height="620">
+      </div>
+
+      <!-- zonas clicáveis sobre o mapa (coordenadas em píxeis do mapa original, 950 × 620) -->
+      <map name="mapa-viagens">
+      <area shape="circle" coords="664,157,14" href="galerie.html#astana" alt="cazaquistão (astana)" title="cazaquistão (astana)">
+      <area shape="circle" coords="574,140,14" href="galerie.html#russia" alt="rússia" title="rússia">
+      <area shape="circle" coords="556,159,14" href="galerie.html#ucrania" alt="ucrânia" title="ucrânia">
+      <area shape="circle" coords="740,268,14" href="galerie.html#tailandia" alt="tailândia" title="tailândia">
+      <area shape="circle" coords="621,237,14" href="galerie.html#dubai" alt="dubai" title="dubai">
+      <area shape="circle" coords="747,209,14" href="galerie.html#china" alt="china" title="china">
+      <area shape="circle" coords="451,197,14" href="galerie.html#portugal" alt="portugal" title="portugal">
+      </map>
+
+      <p class="map-credit">
+        Mapa:
+        <a class="text-link" href="https://commons.wikimedia.org/wiki/File:World_map_-_low_resolution.svg" target="_blank" rel="noopener noreferrer">Al MacDonald</a>,
+        Wikimedia Commons, licença
+        <a class="text-link" href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>
+        (cores e pontos adicionados).
+      </p>
+
+      <div class="table-wrapper">
+        <table class="trips-table">
+          <caption>viagens.</caption>
+          <thead>
+            <tr>
+              <th scope="col">destino</th>
+              <th scope="col">período</th>
+              <th scope="col">galeria</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">cazaquistão</th>
+            <td>até 2019</td>
+            <td><a class="text-link" href="galerie.html#cazaquistao">ver na galeria</a></td>
+          </tr>
+          <tr>
+            <th scope="row">astana</th>
+            <td>agosto — setembro 2026</td>
+            <td><a class="text-link" href="galerie.html#astana">ver na galeria</a></td>
+          </tr>
+          <tr>
+            <th scope="row">rússia</th>
+            <td>2015</td>
+            <td><a class="text-link" href="galerie.html#russia">ver na galeria</a></td>
+          </tr>
+          <tr>
+            <th scope="row">ucrânia</th>
+            <td>—</td>
+            <td><a class="text-link" href="galerie.html#ucrania">ver na galeria</a></td>
+          </tr>
+          <tr>
+            <th scope="row">tailândia</th>
+            <td>2014</td>
+            <td><a class="text-link" href="galerie.html#tailandia">ver na galeria</a></td>
+          </tr>
+          <tr>
+            <th scope="row">dubai</th>
+            <td>2014</td>
+            <td><a class="text-link" href="galerie.html#dubai">ver na galeria</a></td>
+          </tr>
+          <tr>
+            <th scope="row">china</th>
+            <td>2012</td>
+            <td><a class="text-link" href="galerie.html#china">ver na galeria</a></td>
+          </tr>
+          <tr>
+            <th scope="row">portugal</th>
+            <td>—</td>
+            <td><a class="text-link" href="galerie.html#portugal">ver na galeria</a></td>
+          </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">total de destinos</td>
+              <td>8</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </main>
+
+    <!-- rodapé (igual em todas as páginas) -->
+    <footer class="footer">
+      <div class="footer-copyright">
+        <p class="footer-title">© 2026 Mark Muslimov. All rights reserved.</p>
+        <p class="footer-subtitle">Made with ❤️ in Lisbon.</p>
+        <p class="footer-note">mTravel Lite — versão do mTravel adaptada para a escola (UFCD 0792)</p>
+      </div>
+
+      <div class="footer-socials">
+        <a class="liquid-button" href="https://www.linkedin.com/in/markmusl/" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a class="liquid-button" href="https://www.instagram.com/markmusl/" target="_blank" rel="noopener noreferrer">instagram</a>
+        <a class="liquid-button" href="https://github.com/markmusl" target="_blank" rel="noopener noreferrer">github</a>
+      </div>
+    </footer>
+
+    <script src="scripts/mapa.js" defer></script>
+  </body>
+</html>

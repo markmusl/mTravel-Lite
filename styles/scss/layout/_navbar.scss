@@ -1,0 +1,112 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+// Barra de navegação: logótipo à esquerda, menu ao centro, botão sign up à direita.
+nav {
+  @include liquid-container;
+  // a barra fica por cima de fotografias e texto: o vidro é mais denso (0.7) e a sombra mais funda
+  background-color: $background-primary;
+  box-shadow: $shadow-glass-large;
+
+  padding: 5px 5px 5px 25px;
+  border-radius: $radius-pill;
+
+  position: fixed;
+  top: 3%;
+  left: 0;
+  right: 0;
+  z-index: $z-navbar;
+
+  // três colunas: as laterais são iguais, por isso o menu fica sempre ao centro
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  width: 90%;
+  margin-inline: auto;
+
+  // logótipo à esquerda, botão à direita
+  > a:first-child {
+    justify-self: start;
+  }
+
+  // sign up — botão preto: sobre a barra de vidro destaca-se mais
+  > .button {
+    justify-self: end;
+    font-size: $font-size-xs;
+  }
+
+  .logo {
+    height: 18px;
+    width: auto;
+    transition: $speed-fast;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  // cápsula com os itens do menu
+  .nav-section {
+    display: flex;
+    gap: 4px;
+
+    .nav-item {
+      padding: $padding-button;
+      border-radius: $radius-pill;
+
+      font-size: $font-size-xs;
+      text-transform: lowercase;
+      white-space: nowrap; // "la galerie" não quebra para a segunda linha
+      color: $color-gray;
+
+      transition: $speed-fast;
+
+      &:hover {
+        color: $color-black;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      // a página em que estás agora (class="active" no HTML)
+      &.active {
+        color: $color-black;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  // telemóvel: logótipo e botão nos cantos, menu no meio, tudo mais compacto
+  @media (max-width: 640px) {
+    grid-template-columns: auto 1fr auto;
+    width: 94%;
+
+    .logo {
+      height: 14px;
+    }
+
+    .nav-section {
+      justify-self: center;
+
+      .nav-item {
+        padding: 6px 8px;
+      }
+    }
+
+    > .button {
+      padding: 8px 12px;
+    }
+  }
+
+  // ecrã muito estreito: o logótipo desaparece para tudo caber
+  @media (max-width: 420px) {
+    grid-template-columns: 1fr auto;
+
+    > a:first-child {
+      display: none;
+    }
+
+    .nav-section {
+      justify-self: start;
+    }
+  }
+}

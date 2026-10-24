@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entra ou cria a tua conta no mTravel.">
+    <title>mTravel | registo</title>
+    <link rel="icon" href="materials/images/branding/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/scss/main/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">saltar para o conteúdo</a>
+
+    <!-- barra de navegação (igual em todas as páginas) -->
+    <nav aria-label="Principal">
+      <a href="index.html" aria-label="mTravel — página inicial">
+        <img src="materials/images/branding/logo.svg" class="logo" alt="mTravel" width="405" height="69">
+      </a>
+
+      <div class="nav-section">
+        <a class="nav-item" href="index.html">home</a>
+        <a class="nav-item" href="galerie.html">la galerie</a>
+        <a class="nav-item" href="mapa.html">mapa</a>
+      </div>
+
+      <a class="button" href="registration.html">sign up</a>
+    </nav>
+
+    <main class="page" id="conteudo">
+      <section class="full">
+        <form id="registerForm" novalidate>
+          <!-- passos 1 e 2: entrar -->
+          <div class="login-section">
+            <div class="login-step-1">
+              <h1>bem-vindo.</h1>
+              <p class="form-subtitle">digita o teu endereço mail.</p>
+
+              <input
+                type="email"
+                id="emailVerification"
+                aria-label="email"
+                autocomplete="email"
+                placeholder="mark@icloud.com">
+            </div>
+
+            <div class="login-step-2 hidden">
+              <h1>welcome, <span id="welcomeName"></span>!</h1>
+              <p class="form-subtitle">coloca o teu password.</p>
+              <input
+                type="password"
+                id="loginPassword"
+                aria-label="password"
+                autocomplete="current-password"
+                placeholder="password">
+            </div>
+          </div>
+
+          <!-- passo 3: criar conta -->
+          <div class="registration-section hidden">
+            <h1>create an account.</h1>
+
+            <div class="section-data">
+              <input type="text" id="regName" aria-label="nome" autocomplete="name" placeholder="your name">
+              <input type="email" id="regEmail" aria-label="email" autocomplete="email" placeholder="email">
+              <input type="password" id="regPassword" aria-label="password" autocomplete="new-password" placeholder="password">
+              <input
+                type="password"
+                id="regPasswordConfirmation"
+                aria-label="confirmar password"
+                autocomplete="new-password"
+                placeholder="confirm password">
+            </div>
+          </div>
+
+          <!-- mensagem para o utilizador: erro ou "correu bem" -->
+          <p class="form-message" id="formMessage" role="status"></p>
+
+          <button class="button" id="submitButton" type="submit">submit</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- rodapé (igual em todas as páginas) -->
+    <footer class="footer">
+      <div class="footer-copyright">
+        <p class="footer-title">© 2026 Mark Muslimov. All rights reserved.</p>
+        <p class="footer-subtitle">Made with ❤️ in Lisbon.</p>
+        <p class="footer-note">mTravel Lite — versão do mTravel adaptada para a escola (UFCD 0792)</p>
+      </div>
+
+      <div class="footer-socials">
+        <a class="liquid-button" href="https://www.linkedin.com/in/markmusl/" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a class="liquid-button" href="https://www.instagram.com/markmusl/" target="_blank" rel="noopener noreferrer">instagram</a>
+        <a class="liquid-button" href="https://github.com/markmusl" target="_blank" rel="noopener noreferrer">github</a>
+      </div>
+    </footer>
+
+    <script src="scripts/registration.js" defer></script>
+  </body>
+</html>

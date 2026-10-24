@@ -1,0 +1,104 @@
+// Reset moderno (baseado em Josh Comeau e Andy Bell).
+// Remove as "surpresas" do browser para estilizar a partir de uma página limpa.
+
+// 1. width/height passam a contar o padding e a borda.
+//    Sem isto, width: 100% + padding deixa o bloco mais largo que o pai.
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// 2. Remove as margens incluídas em todos os elementos
+*:not(dialog) {
+  margin: 0;
+}
+
+html {
+  // telemóveis não aumentam o texto sozinhos na horizontal
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  // as ligações internas (galerie.html#dubai) deslizam em vez de saltar
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5; // espaçamento entre linhas legível
+  -webkit-font-smoothing: antialiased; // texto mais nítido no macOS
+}
+
+// 3. Imagens e vídeos comportam-se como blocos e não saem do pai
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+// 4. Campos de formulário e botões herdam a fonte da página
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+// 5. Palavras longas quebram em vez de estragar o layout
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+// 6. Os títulos quebram em linhas mais equilibradas
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+// 7. Listas sem marcadores (estiliza-se à mão quando for preciso)
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// 8. Foco visível para quem navega com o teclado
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+// Respeita a opção do sistema "reduzir movimento"
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

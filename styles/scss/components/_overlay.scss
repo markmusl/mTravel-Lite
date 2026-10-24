@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+
+// Fundo desfocado que aparece enquanto a playlist está aberta.
+// Os cliques passam através dele (pointer-events: none).
+.overlay-window {
+  position: fixed;
+  inset: 0;
+  z-index: $z-overlay;
+
+  background-color: $color-overlay;
+  -webkit-backdrop-filter: $blur;
+  backdrop-filter: $blur;
+  pointer-events: none;
+
+  transition:
+    opacity $speed-fast $easing,
+    visibility $speed-slow $easing;
+}
